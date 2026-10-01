@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three-Level Movie Browser</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Movie Library</h1>
+    <p>Select a category, or use the arrows to expand the menu.</p>
+    <ul id="menu" class="tree"></ul>
+  </aside>
+  <main>
+    <h2 id="title">All Movies</h2>
+    <p id="count"></p>
+    <section id="movies" class="grid"></section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

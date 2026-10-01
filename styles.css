@@ -1,0 +1,33 @@
+:root { --nav:#172238; --nav2:#22314d; --accent:#3b82f6; --bg:#f4f7fb; --text:#172033; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Segoe UI,Arial,sans-serif; background:var(--bg); color:var(--text); }
+.layout { display:flex; min-height:100vh; }
+.sidebar { width:300px; background:var(--nav); color:white; padding:24px 14px; }
+.sidebar h1 { margin:0 10px 22px; font-size:21px; }
+.sidebar p { margin:0 10px 16px; color:#aebbd1; font-size:13px; }
+.tree,.tree ul { list-style:none; margin:0; padding:0; }
+.tree ul { display:none; margin-left:16px; border-left:1px solid #42516b; padding-left:7px; }
+.tree li.open > ul { display:block; }
+.menu-row { display:flex; align-items:center; gap:7px; margin:3px 0; border-radius:8px; }
+.menu-row:hover { background:var(--nav2); }
+.toggle,.filter { border:0; background:transparent; color:#e8eef9; cursor:pointer; }
+.toggle { width:30px; height:34px; flex:0 0 30px; }
+.toggle::before { content:'▶'; }
+.open > .menu-row > .toggle::before { content:'▼'; }
+.toggle.placeholder::before { content:''; }
+.filter { flex:1; text-align:left; padding:9px 7px; border-radius:7px; font-size:14px; }
+.filter.active { background:var(--accent); color:white; }
+.level-1 > .menu-row > .filter { font-weight:650; }
+.level-3 > .menu-row > .filter { font-size:13px; color:#c4d2e9; }
+main { flex:1; padding:34px; }
+h2 { margin:0; font-size:30px; }
+#count { color:#66758e; margin:7px 0 20px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(235px,1fr)); gap:16px; }
+.card { background:white; border-radius:13px; padding:20px; box-shadow:0 4px 18px rgba(31,48,76,.08); }
+.card h3 { margin:0 0 7px; }
+.meta { color:#6d7b90; margin-bottom:13px; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; }
+.tag { background:#eaf2ff; color:#2859aa; border-radius:999px; padding:5px 9px; font-size:12px; }
+.path { font-size:12px; color:#748196; margin-top:13px; }
+.error { background:#fff0f0; color:#9b1c1c; padding:20px; border-radius:12px; }
+@media(max-width:760px) { .layout{display:block} .sidebar{width:100%} main{padding:22px} }
