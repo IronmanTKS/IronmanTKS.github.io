@@ -1,5 +1,5 @@
 // Load the data from the separate JSON file on the web server.
-fetch('data.json')
+fetch('Data.json')
   .then(response => {
     if (!response.ok) throw new Error('Unable to load data.json');
     return response.json();
