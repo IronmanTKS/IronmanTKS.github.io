@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Football Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Navigation</h1>
+    <p>Select a category, or use the arrows to expand the menu.</p>
+    <ul id="menu" class="tree"></ul>
+  </aside>
+  <main>
+    <h2 id="title">All Games</h2>
+    <p id="count"></p>
+
+    <!-- FIXED: this must be #matches -->
+    <section id="matches" class="grid"></section>
+
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
